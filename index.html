@@ -376,12 +376,15 @@
                                 <input type="text" class="form-control form-control-lg" id="fullName" required>
                             </div>
                             
+<<<<<<< HEAD
                             <!-- Matric Number Section -->
                             <div class="mb-3">
                                 <label class="form-label"><i class="bi bi-hash me-1"></i>Matric Number</label>
                                 <input type="text" class="form-control" id="matricNumber" required>
                             </div>
                             
+=======
+>>>>>>> f80c805900bbb7ab33b05b1b5c049acf513c9418
                             <div class="row mb-3">
                                 <div class="col-md-6">
                                     <label class="form-label"><i class="bi bi-building me-1"></i>Faculty</label>
@@ -481,7 +484,11 @@
                     <div class="card-body">
                         <div class="preview-container">
                             <!-- Enhanced Profile Card -->
+<<<<<<< HEAD
                             <div class="profile-card" id="profileCardToDownload"></div>
+=======
+                            <div class="profile-card">
+>>>>>>> f80c805900bbb7ab33b05b1b5c049acf513c9418
                                 <div class="profile-header">
                                     <img id="finalPreview" class="profile-image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 24 24' fill='none' stroke='%23ddd' stroke-width='1' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='3' width='18' height='18' rx='2'/%3E%3Ccircle cx='8.5' cy='8.5' r='1.5'/%3E%3Cpath d='M21 15l-5-5L5 21'/%3E%3C/svg%3E">
                                     <h3 id="previewName" class="fw-bold mb-0">Your Name</h3>
@@ -489,12 +496,15 @@
                                 </div>
                                 
                                 <div class="profile-body">
+<<<<<<< HEAD
                                     <!-- Matric Number Preview -->
                                     <div class="info-item">
                                         <span class="info-label"><i class="bi bi-hash me-1"></i>Matric Number</span>
                                         <div class="info-value" id="previewMatric">-</div>
                                     </div>
                                     
+=======
+>>>>>>> f80c805900bbb7ab33b05b1b5c049acf513c9418
                                     <div class="info-item">
                                         <span class="info-label"><i class="bi bi-mortarboard me-1"></i>Level</span>
                                         <div class="info-value" id="previewLevel">Level 400</div>
@@ -548,9 +558,12 @@
         </div>
     </div>
 
+<<<<<<< HEAD
     <!-- html2canvas CDN -->
     <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
 
+=======
+>>>>>>> f80c805900bbb7ab33b05b1b5c049acf513c9418
     <script>
         // Define faculties and departments
         const faculties = {
@@ -655,11 +668,17 @@
         const gallery = document.getElementById('gallery');
         const facultySelect = document.getElementById('faculty');
         const departmentSelect = document.getElementById('department');
+<<<<<<< HEAD
         const profileCardToDownload = document.getElementById('profileCardToDownload');
         
         // Form fields
         const fullName = document.getElementById('fullName');
         const matricNumber = document.getElementById('matricNumber');
+=======
+        
+        // Form fields
+        const fullName = document.getElementById('fullName');
+>>>>>>> f80c805900bbb7ab33b05b1b5c049acf513c9418
         const level = document.getElementById('level');
         const nickname = document.getElementById('nickname');
         const hobbies = document.getElementById('hobbies');
@@ -674,7 +693,10 @@
         const previewHobbies = document.getElementById('previewHobbies');
         const previewQuote = document.getElementById('previewQuote');
         const finalPreview = document.getElementById('finalPreview');
+<<<<<<< HEAD
         const previewMatric = document.getElementById('previewMatric');
+=======
+>>>>>>> f80c805900bbb7ab33b05b1b5c049acf513c9418
         
         // Global variables
         let stream = null;
@@ -697,7 +719,11 @@
             downloadBtn.addEventListener('click', downloadProfile);
             
             // Add live preview updates
+<<<<<<< HEAD
             const inputs = [fullName, matricNumber, level, nickname, hobbies, quote];
+=======
+            const inputs = [fullName, level, nickname, hobbies, quote];
+>>>>>>> f80c805900bbb7ab33b05b1b5c049acf513c9418
             inputs.forEach(input => {
                 input.addEventListener('input', updatePreview);
             });
@@ -824,7 +850,10 @@
             previewFac.textContent = facultySelect.value || 'Faculty';
             previewDept.textContent = departmentSelect.value || 'Department';
             previewLevel.textContent = level.value ? `Level ${level.value}` : 'Level';
+<<<<<<< HEAD
             previewMatric.textContent = matricNumber.value || '-';
+=======
+>>>>>>> f80c805900bbb7ab33b05b1b5c049acf513c9418
             
             // Update hobbies
             previewHobbies.innerHTML = '';
@@ -866,17 +895,23 @@
                 return;
             }
 
+<<<<<<< HEAD
             if (!matricNumber.value) {
                 alert('Please enter your matric number');
                 return;
             }
 
+=======
+>>>>>>> f80c805900bbb7ab33b05b1b5c049acf513c9418
             // Your actual Formspree endpoint
             const FORMSPREE_URL = "https://formspree.io/f/xnnzqjvw";
             
             const formData = {
                 FullName: fullName.value,
+<<<<<<< HEAD
                 MatricNumber: matricNumber.value,
+=======
+>>>>>>> f80c805900bbb7ab33b05b1b5c049acf513c9418
                 Faculty: facultySelect.value,
                 Department: departmentSelect.value,
                 Level: level.value,
@@ -902,7 +937,10 @@
                     // Also save to localStorage
                     const profileData = {
                         name: fullName.value,
+<<<<<<< HEAD
                         matric: matricNumber.value,
+=======
+>>>>>>> f80c805900bbb7ab33b05b1b5c049acf513c9418
                         faculty: facultySelect.value,
                         department: departmentSelect.value,
                         level: level.value,
@@ -977,9 +1015,12 @@
                                 <span class="badge bg-primary">${profile.department}</span>
                                 <span class="badge bg-secondary">${profile.faculty}</span>
                             </div>
+<<<<<<< HEAD
                             <div class="mb-2">
                                 <span class="badge bg-info text-dark"><i class="bi bi-hash"></i> ${profile.matric ? profile.matric : '-'}</span>
                             </div>
+=======
+>>>>>>> f80c805900bbb7ab33b05b1b5c049acf513c9418
                             <p class="card-text">${profile.quote || ''}</p>
                         </div>
                         <div class="card-footer bg-light">
@@ -995,6 +1036,7 @@
         
         // Download profile as image
         function downloadProfile() {
+<<<<<<< HEAD
             // Use html2canvas to render the profile card
             const card = profileCardToDownload;
             // Temporarily set background to white for better image output
@@ -1022,10 +1064,17 @@
                 link.href = canvas.toDataURL(mimeType);
                 link.click();
             });
+=======
+            alert("In a full implementation, this would download your profile card. For now, take a screenshot!");
+>>>>>>> f80c805900bbb7ab33b05b1b5c049acf513c9418
         }
         
         // Initialize app
         document.addEventListener('DOMContentLoaded', init);
     </script>
 </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> f80c805900bbb7ab33b05b1b5c049acf513c9418
